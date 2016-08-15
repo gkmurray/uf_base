@@ -1,0 +1,31 @@
+{
+  "name": "uf_base",
+  "version": "1.0.0",
+  "description": "A blank wordpress theme with Underscores.me and Foundation for use with development",
+  "main": "functions.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gkmurray"
+  },
+  "keywords": [
+    "wp",
+    "development",
+    "_s",
+    "Foundation",
+    "Gulp"
+  ],
+  "author": "Kenneth Murray",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-include": "^2.3.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}
