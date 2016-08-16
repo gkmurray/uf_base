@@ -39,4 +39,4 @@ gulp.task('scripts', function() {
 });
 
 //Default Task
-gulp.task('default', ['sass']);
+gulp.task('default', ['sass', 'scripts']);
