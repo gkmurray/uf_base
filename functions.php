@@ -7,6 +7,8 @@
  * @package uf_Base
  */
 
+require get_template_directory() . '/inc/Foundation_Menu_Walker.php';
+
 if ( ! function_exists( 'uf_base_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
@@ -42,10 +44,9 @@ function uf_base_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'uf_base' ),
-	) );
+	// Register menus
+	register_nav_menu( 'header-menu', __( 'Header Menu','textdomain' ) );
+	add_theme_support( 'menus' );
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments

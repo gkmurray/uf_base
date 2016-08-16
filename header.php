@@ -43,7 +43,17 @@
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'uf_base' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php
+			wp_nav_menu(array(
+				'container' => false,
+				'menu' => __( 'Header Menu', 'textdomain' ),
+				'menu_class' => 'dropdown menu',
+				'theme_location' => 'header-menu',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
+				'fallback_cb' => 'foundation_menu_fallback',
+				'walker' => new Foundation_Menu_Walker(),
+			));
+			?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
