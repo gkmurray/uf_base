@@ -53,7 +53,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @include foundation-global-styles;
 @include foundation-grid;
-@include foundation-flex-grid;
+// @include foundation-flex-grid;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -70,7 +70,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @include foundation-drilldown-menu;
 @include foundation-dropdown;
 @include foundation-dropdown-menu;
-@include foundation-flex-video;
+// @include foundation-flex-video;
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-off-canvas;
@@ -91,7 +91,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @include foundation-top-bar;
 @include foundation-visibility-classes;
 @include foundation-float-classes;
-@include foundation-flex-classes;
+// @include foundation-flex-classes;
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
@@ -102,26 +102,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
-
-/*--------------------------------------------------------------
-# Normalize
---------------------------------------------------------------*/
-@import "normalize";
-
-/*--------------------------------------------------------------
-# Typography
---------------------------------------------------------------*/
-@import "typography/typography";
-
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-@import "elements/elements";
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-@import "forms/forms";
 
 /*--------------------------------------------------------------
 # Navigation
