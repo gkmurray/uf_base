@@ -20,12 +20,17 @@
   "author": "Kenneth Murray",
   "license": "UNLICENSED",
   "devDependencies": {
+    "babel-preset-es2015": "^6.13.2",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
+    "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.0",
     "gulp-include": "^2.3.1",
+    "gulp-order": "^1.1.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^2.0.0"
   }
 }
+

@@ -11,32 +11,35 @@
  *
  * @package uf_Base
  */
+?>
 
-get_header(); ?>
-	<div class="row">
-		<div class="column medium-8">
+<?php get_header(); ?>
+	
+	<div id="content">
+		
+		<div id="inner-content" class="row">
 
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+			<main id="main" class="large-8 medium-8 columns" role="main">
+		
+				<?php
+				while ( have_posts() ) : the_post();
 
-					<?php
-					while ( have_posts() ) : the_post();
+					get_template_part( 'parts/loop', 'page' );
 
-						get_template_part( 'template-parts/content', 'page' );
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 
-						// If comments are open or we have at least one comment, load up the comment template.
-						if ( comments_open() || get_comments_number() ) :
-							comments_template();
-						endif;
+				endwhile; // End of the loop.
+				?>
 
-					endwhile; // End of the loop.
-					?>
+			</main> <!-- end #main -->
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
+			<?php get_sidebar(); ?>
+		    
+		</div> <!-- end #inner-content -->
 
-		</div><!-- .column -->
+	</div> <!-- end #content -->
 
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

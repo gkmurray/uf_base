@@ -6,15 +6,24 @@
  *
  * @package uf_Base
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
 
-<div class="column medium-4" >
-	<aside id="secondary" class="widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-1' ); ?>
-	</aside><!-- #secondary -->
-</div><!-- .column -->
-</div><!-- .row -->
+<div class="column large-4 show-for-large">
+	<div id="sidebar1" class="sidebar" role="complementary">
+
+		<?php if ( is_active_sidebar( 'sb-primary' ) ) : ?>
+
+			<?php dynamic_sidebar( 'sb-primary' ); ?>
+
+		<?php else : ?>
+
+		<!-- This content shows up if there are no widgets defined in the backend. -->
+							
+		<div class="alert help">
+			<p><?php _e( 'Please activate some Widgets.', 'jointswp' );  ?></p>
+		</div>
+
+		<?php endif; ?>
+
+	</div>
+</div>

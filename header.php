@@ -9,52 +9,58 @@
  * @package uf_Base
  */
 
-?><!DOCTYPE html>
+?>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
-<?php wp_head(); ?>
+	<!-- Force IE to use the latest rendering engine available -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+	<!-- Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta class="foundation-mq">
+	
+	<!-- If Site Icon isn't set in customizer -->
+	<?php if ( !has_site_icon() ) : ?>
+		<!-- Icons & Favicons -->
+		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
+		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/apple-icon-touch.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
+		<![endif]-->
+		
+		<!-- Chrome/Android header color -->
+		<meta name="theme-color" content="#A41E12">
+	<?php endif; ?>
+
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+
+	<?php wp_head(); ?>
+
+	<!-- Drop Google Analytics here -->
+	<!-- end analytics -->
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'uf_base' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<div class="off-canvas-wrapper">
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
+		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'uf_base' ); ?></button>
-			<?php
-			wp_nav_menu(array(
-				'container' => false,
-				'menu' => __( 'Header Menu', 'textdomain' ),
-				'menu_class' => 'dropdown menu',
-				'theme_location' => 'header-menu',
-				'items_wrap'      => '<ul id="%1$s" class="%2$s" data-dropdown-menu>%3$s</ul>',
-				'fallback_cb' => 'foundation_menu_fallback',
-				'walker' => new Foundation_Menu_Walker(),
-			));
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+			<?php get_template_part( 'parts/content', 'offcanvas' ); ?>
 
-	<div id="content" class="site-content">
+			<!-- original content goes in this container -->
+			<div class="off-canvas-content" data-off-canvas-content>
+
+				<header id="masthead" class="site-header" role="banner">
+
+					<!-- This navs will be applied to the topbar, above all content 
+					To see additional nav styles, visit the /parts directory -->
+					<?php get_template_part( 'parts/nav', 'offcanvas-topbar' ); ?>
+				</header><!-- #masthead -->
+
+				<div id="page" class="site">
+					<div id="content" class="site-content">

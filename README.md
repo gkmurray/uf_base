@@ -1,7 +1,7 @@
 uf_base
 ===
 
-A blank Wordpress theme based on Underscores.me and Foundation, meant for theme development.
+A blank Wordpress theme based on Underscores.me, JointsWP, and Foundation, meant for theme development.
 
 Setup Guide
 ---------------
@@ -12,6 +12,12 @@ npm install
 bower install
 gulp
 ```
+
+Troubleshooting
+---------------
+If you get an error creating simlinks during `npm install`, try `npm install --no-bin-links`
+
+If you now get error about Stack Size Exceeded, you will need to open the `packages.json` and install each module manually
 
 Usage
 ---------------

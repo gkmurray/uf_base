@@ -11,18 +11,18 @@
  *
  * @package uf_Base
  */
+?>
+<?php get_header(); ?>
+			
+	<div id="content">
+	
+		<div id="inner-content" class="row">
+	
+		    <main id="main" class="large-8 medium-8 columns" role="main">
+		    
+			    <?php if (have_posts()) : 
 
-get_header(); ?>
-	<div class="row">
-		<div class="column medium-8">
-
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
-
-				<?php
-				if ( have_posts() ) :
-
-					if ( is_home() && ! is_front_page() ) : ?>
+				    if ( is_home() && ! is_front_page() ) : ?>
 						<header>
 							<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
 						</header>
@@ -31,30 +31,31 @@ get_header(); ?>
 					endif;
 
 					/* Start the Loop */
-					while ( have_posts() ) : the_post();
-
+			    	while (have_posts()) : the_post();
+			 
 						/*
 						 * Include the Post-Format-specific template for the content.
 						 * If you want to override this in a child theme, then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'template-parts/content', get_post_format() );
+						get_template_part( 'parts/loop', 'archive' );
+				    
+					endwhile; ?>	
 
-					endwhile;
+					<?php joints_page_navi(); ?>
+					
+				<?php else : ?>
+											
+					<?php get_template_part( 'parts/content', 'missing' ); ?>
+						
+				<?php endif; ?>
+																								
+		    </main> <!-- end #main -->
+		    
+		    <?php get_sidebar(); ?>
 
-					the_posts_navigation();
+		</div> <!-- end #inner-content -->
 
-				else :
+	</div> <!-- end #content -->
 
-					get_template_part( 'template-parts/content', 'none' );
-
-				endif; ?>
-
-				</main><!-- #main -->
-			</div><!-- #primary -->
-
-		</div><!-- .column -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

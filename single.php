@@ -6,34 +6,44 @@
  *
  * @package uf_Base
  */
+?>
+<?php get_header(); ?>
+			
+<div id="content">
 
-get_header(); ?>
-	<div class="row">
-		<div class="column medium-8">
+	<div id="inner-content" class="row">
 
-			<div id="primary" class="content-area">
-				<main id="main" class="site-main" role="main">
+		<main id="main" class="large-8 medium-8 columns" role="main">
 
-				<?php
-				while ( have_posts() ) : the_post();
+		<?php
+		if (have_posts()) : 
 
-					get_template_part( 'template-parts/content', get_post_format() );
+			while ( have_posts() ) : the_post();
 
-					the_post_navigation();
+				get_template_part( 'parts/loop', 'single' );
 
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
+				the_post_navigation();
 
-				endwhile; // End of the loop.
-				?>
+				// If comments are open or we have at least one comment, load up the comment template.
+				if ( comments_open() || get_comments_number() ) :
+					comments_template();
+				endif;
 
-				</main><!-- #main -->
-			</div><!-- #primary -->
+			endwhile; // End of the loop.
 
-		</div><!-- .column -->
+		else :
+		
+		   		get_template_part( 'parts/content', 'missing' );
 
-<?php
-get_sidebar();
-get_footer();
+		endif;
+		?>
+
+		</main> <!-- end #main -->
+
+		<?php get_sidebar(); ?>
+
+	</div> <!-- end #inner-content -->
+
+</div> <!-- end #content -->
+
+<?php get_footer(); ?>
