@@ -37,7 +37,7 @@
 						// Only show the widget if site has multiple categories.
 						if ( uf_base_categorized_blog() ) : ?>
 							<div class="widget widget_categories">
-								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'uf_base' ); ?></h2>
+								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'jointswp' ); ?></h2>
 								<ul>
 								<?php
 									wp_list_categories( array(
