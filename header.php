@@ -63,4 +63,3 @@
 				</header><!-- #masthead -->
 
 				<div id="page" class="site">
-					<div id="content" class="site-content">
