@@ -1,13 +1,3 @@
-<?php
-/**
- * The template for displaying 404 pages (not found).
- *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
- *
- * @package uf_Base
- */
-?>
-
 <?php get_header(); ?>
 			
 	<div id="content">
@@ -27,31 +17,7 @@
 					</section> <!-- end article section -->
 
 					<section class="search">
-					    <p>
-					    	<?php get_search_form(); ?>
-					</section>	
-
-					<section>
-						<?php the_widget( 'WP_Widget_Recent_Posts' ); 
-
-						// Only show the widget if site has multiple categories.
-						if ( uf_base_categorized_blog() ) : ?>
-							<div class="widget widget_categories">
-								<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'jointswp' ); ?></h2>
-								<ul>
-								<?php
-									wp_list_categories( array(
-										'orderby'    => 'count',
-										'order'      => 'DESC',
-										'show_count' => 1,
-										'title_li'   => '',
-										'number'     => 5,
-									) );
-								?>
-								</ul>
-							</div><!-- .widget -->
-						<?php endif; ?>
-
+					    <p><?php get_search_form(); ?></p>
 					</section> <!-- end search section -->
 			
 				</article> <!-- end article -->
@@ -63,4 +29,3 @@
 	</div> <!-- end #content -->
 
 <?php get_footer(); ?>
-

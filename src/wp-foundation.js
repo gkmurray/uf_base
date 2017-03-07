@@ -4,7 +4,7 @@ and Foundation play nice together.
 */
 
 jQuery(document).ready(function() {
-
+    console.log('Im called');
     // Remove empty P tags created by WP inside of Accordion and Orbit
     jQuery('.accordion p:empty, .orbit p:empty').remove();
 

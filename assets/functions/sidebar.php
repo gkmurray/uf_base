@@ -2,8 +2,8 @@
 // SIDEBARS AND WIDGETIZED AREAS
 function joints_register_sidebars() {
 	register_sidebar(array(
-		'id' => 'sb-primary',
-		'name' => __('Primary Sidebar', 'jointswp'),
+		'id' => 'sidebar1',
+		'name' => __('Sidebar 1', 'jointswp'),
 		'description' => __('The first (primary) sidebar.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
@@ -12,8 +12,8 @@ function joints_register_sidebars() {
 	));
 
 	register_sidebar(array(
-		'id' => 'sb-offcanvas',
-		'name' => __('Offcanvas Sidebar', 'jointswp'),
+		'id' => 'offcanvas',
+		'name' => __('Offcanvas', 'jointswp'),
 		'description' => __('The offcanvas sidebar.', 'jointswp'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',

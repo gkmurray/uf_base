@@ -1,30 +1,41 @@
-uf_base
-===
+### About JPack
+JPack is an extension of the JointsWP theme to use Webpack 2 for development. Gulp has been replaced,
+but all the great features you love still exist.
 
-A blank Wordpress theme based on Underscores.me, JointsWP, and Foundation, meant for theme development.
+- Run npm install to get started
+- Run npm start to start working and webpack will watch for changes
+- Run npm build when your ready to bundle
 
-Setup Guide
----------------
+Works best with vagrant + VVV + themereview
 
-```
-git clone https://github.com/gkmurray/uf_base.git
-npm install
-bower install
-gulp
-```
+### About JointsWP
+Find out more here: www.jointswp.com  
+Demo: www.jointswp.com/demo
 
-Troubleshooting
----------------
-If you get an error creating simlinks during `npm install`, try `npm install --no-bin-links`
+Currently using Foundation 6.3.
 
-If you now get error about Stack Size Exceeded, you will need to open the `packages.json` and install each module manually
+### What is JointsWP?
+JointsWP is a blank WordPress theme built with Foundation 6, giving you all the power and flexibility you need to build complex, mobile friendly websites without having to start from scratch.
 
-Usage
----------------
-Clone into your Wordpress themes folder.
+Starting its humble life as a fork of the popular theme Bones, JointsWP is now the foundation of thousands of websites across the globe.
 
-Compile and minify SASS from the src/sass directory with `gulp sass`
+### What comes with JointsWP?
+JointsWP comes pre-baked with all of the great features that are found in the Foundation framework – simply put, if it works in Foundation, it will work in JointsWP. The theme also includes:
 
-Concatenate and minify JS from the src/js folder with `gulp script` 
+- Foundation Navigation Options
+- Motion-UI
+- Grid archive templates
+- Translation Support
+- Bower and Gulp Support
+- And much, much more!
 
-Good luck!
+### What tools do I need to use JointsWP?
+You can use whatever you want – seriously. While the Sass version comes with Bower and Gulp support out of the box, you aren’t required to use those by any means. You can use CodeKit, Grunt, Compass or nothing at all. It’s completely up to you how you decide to build you theme – JointsWP won’t get in the way of your workflow.
+
+### Getting Started With Gulp
+- Install [node.js](https://nodejs.org).
+- Using the command line, navigate to your theme directory
+- Run npm install
+- Run gulp to confirm everything is working
+
+[Read more about how Gulp is used with JointsWP.](http://jointswp.com/docs/gulp/)

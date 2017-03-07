@@ -1,30 +1,4 @@
 <?php
-/**
- * uf Base functions and definitions.
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
- * @package uf_Base
- */
-
-
-// Implement the Custom Header feature.
-require get_template_directory() . '/inc/custom-header.php';
-
-// Custom template tags for this theme.
-require get_template_directory() . '/inc/template-tags.php';
-
-// Custom functions that act independently of the theme templates.
-require get_template_directory() . '/inc/extras.php';
-
-// Customizer additions.
-require get_template_directory() . '/inc/customizer.php';
-
-// Load Jetpack compatibility file.
-require get_template_directory() . '/inc/jetpack.php';
-
-
-
 // Theme support options
 require_once(get_template_directory().'/assets/functions/theme-support.php'); 
 
@@ -49,6 +23,7 @@ require_once(get_template_directory().'/assets/functions/page-navi.php');
 // Adds support for multiple languages
 require_once(get_template_directory().'/assets/translation/translation.php'); 
 
+
 // Remove 4.2 Emoji Support
 // require_once(get_template_directory().'/assets/functions/disable-emoji.php'); 
 
@@ -65,4 +40,4 @@ require_once(get_template_directory().'/assets/translation/translation.php');
 // require_once(get_template_directory().'/assets/functions/login.php'); 
 
 // Customize the WordPress admin
-// require_once(get_template_directory().'/assets/functions/admin.php');
+// require_once(get_template_directory().'/assets/functions/admin.php'); 

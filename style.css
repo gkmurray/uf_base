@@ -1,21 +1,11 @@
-/*!
-Theme Name: uf Base
-Theme URI: http://underscores.me/
+/******************************************************************
+Theme Name: JPack
+Theme URI: https://github.com/gkmurray/uf_base/tree/webpack
+Description: A fork of JointsWP with Webpack2 for use with theme development
 Author: Kenneth Murray
-Author URI: http://underscores.me/
-Description: A basic theme with Underscores, Joints and Foundation 6
-Version: 1.0.0
-License: GNU General Public License v2 or later
+Author URI: https://github.com/gkmurray/uf_base/tree/webpack
+Version: 1.0
+License: GNU General Public License & MIT
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: uf_base
-Tags: Sass, Starter
-
-This theme, like WordPress, is licensed under the GPL.
-Use it to make something cool, have fun, and share what you've learned with others.
-
-uf Base is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
-Underscores is distributed under the terms of the GNU GPL v2 or later.
-
-Normalizing styles have been helped along thanks to the fine work of
-Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
-*/
+Tags: Sass, Webpack
+******************************************************************/

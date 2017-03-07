@@ -4,19 +4,20 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-10-26 23:23+0100\n"
 "PO-Revision-Date: \n"
-"Last-Translator: Pedro Mendonça <ped.gaspar@gmail.com>\n"
+"Last-Translator: Andrey Azevedo <andreyaze@gmail.com>\n"
 "Language-Team: fulgor <frag.fulgor@gmail.com>\n"
-"Language: pt_PT\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
 "_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
-"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c\n"
+"esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;"
+"esc_html_x:1,2c\n"
 "X-Poedit-Basepath: ../..\n"
 "X-Generator: Poedit 1.8.11\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -28,8 +29,8 @@ msgstr "404 épico – Artigo não encontrado"
 msgid ""
 "The article you were looking for was not found, but maybe try looking again!"
 msgstr ""
-"Não foi possível encontrar o conteúdo que procurou, talvez queira tentar "
-"outra vez!"
+"O artigo que você estava procurando não foi encontrado, talvez queira "
+"tentar outra vez!"
 
 #: assets/functions/admin.php:35
 msgid "The RSS Feed is either empty or unavailable."
@@ -57,12 +58,12 @@ msgstr "Ler"
 
 #: assets/functions/cleanup.php:74
 msgid "... Read more &raquo;"
-msgstr "... Ler mais &raquo;"
+msgstr "... Leia mais &raquo;"
 
 #: assets/functions/cleanup.php:96
 #, php-format
 msgid "Posts by %s"
-msgstr "Conteúdos de %s"
+msgstr "Postagens por %s"
 
 #: assets/functions/comments.php:17
 #, php-format
@@ -87,11 +88,11 @@ msgstr "Tipos personalizados"
 
 #: assets/functions/custom-post-type.php:23
 msgid "Custom Post"
-msgstr "Conteúdo personalizado"
+msgstr "Postagem personalizada"
 
 #: assets/functions/custom-post-type.php:24
 msgid "All Custom Posts"
-msgstr "Todos os conteúdos personalizados"
+msgstr "Todos as postagens personalizadas"
 
 #: assets/functions/custom-post-type.php:25
 msgid "Add New"
@@ -107,31 +108,31 @@ msgstr "Editar"
 
 #: assets/functions/custom-post-type.php:28
 msgid "Edit Post Types"
-msgstr "Editar tipos de conteúdo"
+msgstr "Editar tipos de postagens"
 
 #: assets/functions/custom-post-type.php:29
 msgid "New Post Type"
-msgstr "Novo tipo de conteúdo"
+msgstr "Novo tipo de postagem"
 
 #: assets/functions/custom-post-type.php:30
 msgid "View Post Type"
-msgstr "Ver tipo de conteúdo"
+msgstr "Ver tipo de postagem"
 
 #: assets/functions/custom-post-type.php:31
 msgid "Search Post Type"
-msgstr "Procurar tipo de conteúdo"
+msgstr "Procurar tipo de postagem"
 
 #: assets/functions/custom-post-type.php:32
 msgid "Nothing found in the Database."
-msgstr "Nada encontrado na base de dados"
+msgstr "Nada encontrado no banco de dados"
 
 #: assets/functions/custom-post-type.php:33
 msgid "Nothing found in Trash"
-msgstr "Nada encontrado no lixo"
+msgstr "Nada encontrado na lixeira"
 
 #: assets/functions/custom-post-type.php:36
 msgid "This is the example custom post type"
-msgstr "Este é o exemplo de tipo de contúdo personalizado"
+msgstr "Este é o exemplo de tipo de postagem personalizada"
 
 #: assets/functions/custom-post-type.php:73
 msgid "Custom Categories"
@@ -163,7 +164,7 @@ msgstr "Editar categoria personalizada"
 
 #: assets/functions/custom-post-type.php:80
 msgid "Update Custom Category"
-msgstr "Actualizar categoria personalizada"
+msgstr "Atualizar categoria personalizada"
 
 #: assets/functions/custom-post-type.php:81
 msgid "Add New Custom Category"
@@ -191,11 +192,11 @@ msgstr "Todas as etiquetas personalizadas"
 
 #: assets/functions/custom-post-type.php:100
 msgid "Parent Custom Tag"
-msgstr "Etiqueita personalizada superior"
+msgstr "Etiqueta personalizada superior"
 
 #: assets/functions/custom-post-type.php:101
 msgid "Parent Custom Tag:"
-msgstr "Etiqueita personalizada superior:"
+msgstr "Etiqueta personalizada superior:"
 
 #: assets/functions/custom-post-type.php:102
 msgid "Edit Custom Tag"
@@ -203,7 +204,7 @@ msgstr "Editar etiqueta personalizada"
 
 #: assets/functions/custom-post-type.php:103
 msgid "Update Custom Tag"
-msgstr "Actualizar etiqueta personalizada"
+msgstr "Atualizar etiqueta personalizada"
 
 #: assets/functions/custom-post-type.php:104
 msgid "Add New Custom Tag"
@@ -219,7 +220,7 @@ msgstr "O menu principal"
 
 #: assets/functions/menu.php:6 assets/functions/menu.php:55
 msgid "Footer Links"
-msgstr "Ligações do rodapé"
+msgstr "Links do rodapé"
 
 #: assets/functions/page-navi.php:35
 msgid "First"
@@ -239,7 +240,7 @@ msgstr "Última"
 
 #: assets/functions/related-posts.php:18
 msgid "<h4>Related Posts</h4>"
-msgstr "<h4>Conteúdos relacionados</h4>"
+msgstr "<h4>Postagens relacionadas</h4>"
 
 #: assets/functions/sidebar.php:6
 msgid "Sidebar 1"
@@ -295,15 +296,15 @@ msgstr "Esta é a mensagem de erro no modelo parts/content-missing.php."
 
 #: parts/content-missing.php:24
 msgid "Oops, Post Not Found!"
-msgstr "Ups! Conteúdo não encontrado!"
+msgstr "Ops! Postagem não encontrada!"
 
 #: parts/content-missing.php:28
 msgid "Uh Oh. Something is missing. Try double checking things."
-msgstr "Ups. Falta algo. Verifique de novo."
+msgstr "Ops. Falta algo. Verifique de novo."
 
 #: parts/loop-archive-grid.php:26 parts/loop-archive.php:9
 msgid "Read more..."
-msgstr "Ler mais..."
+msgstr "Leia mais..."
 
 #: parts/loop-archive.php:13 parts/loop-single.php:15
 msgid "Tags:"
@@ -344,8 +345,8 @@ msgstr "Procurar"
 
 #: sidebar.php:12
 msgid "Please activate some Widgets."
-msgstr "Por favor active alguns widgets."
+msgstr "Por favor ative alguns widgets."
 
 #: taxonomy-custom_cat.php:25
 msgid "Posts Categorized:"
-msgstr "Conteúdos categorizados:"
+msgstr "Postagens categorizadas:"
